@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Xgtib Hosting</title>
+  
+  <style>
+  body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: navy;
+}
+    .terminal {
+      width: 350px;
+      height: 350px;
+      background-color: #222;
+      color: #fff;
+      font-family: monospace;
+      overflow-y: scroll;
+      padding: 10px;
+    }
+    
+    input {
+      width: 200px;
+      height: 30px;
+      background-color: black;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <h1 style="color: white;">Selamat datang Di Website resmi XgtibDev Store!</h1>
+  <p style="color: white;", style="font-family: monospace;">silahkan lihat lihat menunya terlebih dahulu dengan mengetik hallo di command box</p>
+  <div class="terminal">
+    <p>root@xgtibdev:$ Menu: </p> 
+    <p>menu</p>
+    <p>listjualan</p>
+    <p>wa</p>
+    <p>hello</p>
+    </div>
+    
+<script>
+  const terminal = document.querySelector('.terminal');
+  const input = document.createElement('input');
+  input.type = 'text';
+  terminal.appendChild(input);
+
+  input.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter') {
+      const command = input.value;
+      const output = document.createElement('p');
+      output.textContent = `>`;
+      terminal.appendChild(output);
+
+      // Simulasi menjalankan perintah (ganti dengan logika sebenarnya)
+      if (command === 'menu') {
+        output.textContent += '\nselamat datang, silahkan belanja apa yang ingin dicari, jika sudah dapat silahkan untuk ketik *wa* dikolom command ya'
+      } if (command === 'listjualan') {
+        output.textContent += '\n -Jasa membuat Website Jualan dan Website Profile\n -Jasa Unban Whatsapp \n -Jasa Edit Video \n -Jasa Edit Script \n -Jasa Retyping atau scripting, Hanya untuk Javascript, Html, Css, C++, Python'
+      } if (command === 'hallo', 'hello') {
+        output.textContent += 'Haii, selamat datang di XgtibDev Store, silahkan pilih menu yang ingin digunakan'
+      } if (command === 'wa') {
+  const nomorWA = '6285182389210'; // Ganti dengan nomor WA yang diinginkan
+  const pesan = 'Halo Bang, Saya mau pesan jasa'; // Pesan opsional
+  const linkWA = `https://wa.me/${nomorWA}?text=${encodeURIComponent(pesan)}`;
+  window.open(linkWA, '_blank');
+  output.textContent += `Membuka WhatsApp: ${nomorWA}`;
+}
+
+      input.value = '';
+    }
+  });
+</script>
+<div class="image-card"></div>
+</body>
+</html>
